@@ -17,9 +17,6 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.body.style.overflow = "";
 	});
 
-	// overlay.addEventListener('click', function () {
-	// 	this.style.display = "none";
-	// });
 
 	const sendMessage = document.querySelector('.send-message'),
 		overlayy = document.querySelector('.overlayy'),
@@ -36,7 +33,5 @@ window.addEventListener('DOMContentLoaded', function () {
 		overlayy.style.display = "none";
 		document.body.style.overflow = "";
 	});
-	// overlayy.addEventListener('click', function () {
-	// 	this.style.display = "none";
-	// });
+
 });
