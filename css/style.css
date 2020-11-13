@@ -291,7 +291,7 @@ img {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
-	z-index: 3;
+	z-index: 0;
 }
 
 .overlay .popup {
@@ -299,8 +299,7 @@ img {
 	z-index: 4;
 	left: 50%;
 	top: 150px;
-	max-width: 752px;
-	width: 95%;
+	width: 752px;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
@@ -354,7 +353,7 @@ img {
 }
 
 .overlay .popup-form__input {
-	width: 365px;
+	width: 100%;
 	height: 56px;
 	margin-top: 17px;
 	font-size: 18px;
@@ -482,7 +481,7 @@ img {
 }
 
 .overlay .popup-form__input {
-	width: 365px;
+	width: 100%;
 	height: 56px;
 	margin-top: 17px;
 	font-size: 18px;
@@ -540,7 +539,14 @@ img {
 	box-shadow: 0 0 10px #c78030;
 }
 
+
 /* Макала окно  */
+
+
+
+
+
+
 
 .overlayy {
 	position: fixed;
@@ -549,7 +555,7 @@ img {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
-	z-index: 3;
+	z-index: 0;
 }
 
 .overlayy .popupp {
@@ -611,7 +617,7 @@ img {
 }
 
 .overlayy .popup-form__inputt {
-	width: 365px;
+	width: 100%;
 	height: 56px;
 	margin-top: 17px;
 	font-size: 18px;
@@ -680,6 +686,7 @@ img {
 	color: #fff;
 	text-align: left;
 	margin-bottom: 10px;
+	resize: none;
 }
 
 .overlayy .popup-form__text::placeholder {
@@ -738,12 +745,42 @@ iframe {
 		font-size: calc(100% - 1px);
 	}
 
-	.popup-titlee {
-		font-size: calc(100% - 2px);
+	.overlay,
+	.overlayy {
+		width: calc(100% - 1px);
+		height: calc(100% - 1px);
 	}
 
-	.popup-form-headerr {
-		font-size: calc(100% - 5px);
+	.overlayy .popupp,
+	.overlay .popup {
+		top: 44px;
+		width: calc(100% - 147px);
+	}
+
+	.overlayy .popup-titlee,
+	.overlay .popup-title,
+	.overlay .popup-form-header,
+	.overlayy .popup-form-headerr {
+		font-size: calc(100% - 1px);
+	}
+
+	.overlay .popup-form__input {
+		margin-left: 0;
+		margin-top: 15px;
+	}
+
+	.overlayy .popup-closee,
+	.overlay .popup-close {
+		right: 0px;
+	}
+
+}
+
+@media(max-width: 700px) {
+
+	.overlayy .popup-formm,
+	.overlay .popup-form {
+		padding: 34px 17px 50px 17px;
 	}
 }
 
@@ -754,5 +791,35 @@ iframe {
 
 	.btn {
 		margin-bottom: 10px;
+	}
+
+	.overlay,
+	.overlayy {
+		width: calc(100% - 2px);
+		height: calc(100% - 5px);
+	}
+
+	.overlayy .popupp,
+	.overlay .popup {
+		width: calc(100% - 20px);
+	}
+
+	.overlayy .popup-formm,
+	.overlay .popup-form {
+		padding: 34px 17px 50px 17px;
+
+		/* padding-left: calc(100% - 290px); */
+		/* padding-right: calc(100% - 290px); */
+	}
+
+	.overlayy .popup-titlee,
+	.overlay .popup-title {
+		font-size: calc(100% - 1px);
+	}
+
+	.overlayy .popup-form-headerr,
+	.overlay .popup-form-header {
+		text-align: left;
+		font-size: calc(100% - 1px);
 	}
 }
